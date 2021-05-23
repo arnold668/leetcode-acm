@@ -29,7 +29,7 @@ void print_v(const vector<vector<int>> &vec)
 {
 	for (int i = 0; i < vec.size(); ++i)
 	{
-		for (int j = 0; j < vec[0].size(); ++j)
+		for (int j = 0; j < vec[i].size(); ++j)
 			cout << vec[i][j] << " ";
 		cout << endl;
 	}
@@ -154,7 +154,7 @@ int main()
 	cout<<"it is begin"<<endl;
 	TreeNode* head=rebuildTree(pre,in,0,4,0,4);
 	cout<<endl;
-	TreeNode* head1=rebuildTree(post,in,4,0,4);
+	// TreeNode* head1=rebuildTree(post,in,4,0,4);
 	cout<<endl;
 	vector<int> vec;
 	grid=levelOrder(head);
