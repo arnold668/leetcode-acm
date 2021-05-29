@@ -36,25 +36,6 @@ using namespace std;
 
 */
 
-void print_v(const vector<int> &vec)
-{
-	for (int j = 0; j < vec.size(); ++j)
-		cout << vec[j] << " ";
-	cout << endl;
-}
-
-void print_v(const vector<vector<int>> &vec)
-{
-	for (int i = 0; i < vec.size(); ++i)
-	{
-		for (int j = 0; j < vec[i].size(); ++j)
-			cout << vec[i][j] << " ";
-		cout << endl;
-	}
-}
-
-
-
 int stoi_my(string str)
 {
 	int i=0;
@@ -72,7 +53,7 @@ int stoi_my(string str)
 	{
 		int num=str[i]-'0';
 		if(res>INT_MAX/10&&(res==INT_MAX/10&&num>7))  
-			return flag>1?INT_MAX:INT_MIN;
+			return flag>0?INT_MAX:INT_MIN;
 		res=res*10+num;
 		i++;
 	}
